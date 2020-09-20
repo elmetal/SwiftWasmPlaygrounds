@@ -8,11 +8,6 @@ struct TokamakApp: App {
     }
 }
 
-struct Item {
-    var isCompleted: Bool = false
-    var text: String
-}
-
 struct ContentView: View {
     @State var newItem = ""
     @State var items = [Item]()
