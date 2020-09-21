@@ -9,28 +9,26 @@ struct TokamakApp: App {
 }
 
 struct ContentView: View {
-    @State var newItem = ""
-    @State var items = [Item]()
-
-    func addNewItem() {
-        items.append(Item(text: newItem))
-        newItem = ""
-    }
-
+    @State var text = "0"
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Button("+", action: addNewItem)
-                TextField("New todo item", text: $newItem, onCommit: addNewItem)
-            }
-            List {
-                ForEach(0..<items.count, id: \.self) { i in
-                    Toggle(
-                        items[i].text,
-                        isOn: Binding(get: { items[i].isCompleted }, set: { items[i].isCompleted = $0 })
-                    )
-                }
-            }
+        VStack {
+          Text(text)
+          HStack(alignment: .bottom) {
+            NumberPad(text: $text)
+            CalcPad()
+          }
+        }    
+    }
+}
+
+struct CalcPad: View {
+    var body: some View {
+        VStack {
+          Button(action: {}) { Text("÷") }
+          Button(action: {}) { Text("×") }
+          Button(action: {}) { Text("-") }
+          Button(action: {}) { Text("+") }
+          Button(action: {}) { Text("=") }
         }
     }
 }
