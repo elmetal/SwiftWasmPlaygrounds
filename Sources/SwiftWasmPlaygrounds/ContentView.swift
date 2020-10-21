@@ -4,7 +4,17 @@ struct ContentView: View {
     var body: some View {
         VStack {
             HeaderView()
-            TTTGameBoard()
+              .padding()
+            Spacer()
+            Text("oxゲーム")
+              .padding(4)
+            TTTGameBoardView()
+            Spacer()
+            HTML("a", ["href":"https://github.com/elmetal/SwiftWasmPlaygrounds"]) {
+              Text("repository")
+                .foregroundColor(.blue)
+                .padding()
+            }
         }
     }
 }
