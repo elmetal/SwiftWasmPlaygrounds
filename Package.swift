@@ -6,7 +6,7 @@ let package = Package(
         .executable(name: "SwiftWasmPlaygrounds", targets: ["SwiftWasmPlaygrounds"])
     ],
     dependencies: [
-        .package(name: "Tokamak", url: "https://github.com/swiftwasm/Tokamak", from: "0.3.0")
+        .package(name: "Tokamak", url: "https://github.com/swiftwasm/Tokamak", from: "0.4.0")
     ],
     targets: [
         .target(
