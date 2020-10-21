@@ -2,7 +2,7 @@ import TokamakShim
 
 struct TokamakApp: App {
     var body: some Scene {
-        WindowGroup("Tokamak App") {
+        WindowGroup("SwiftWasmPlaygrounds App") {
             ContentView()
         }
     }
@@ -20,18 +20,6 @@ struct ContentView: View {
                 }
                 NavigationLink(destination: Text("hello")) { Text("navigation link") }
             }
-        }
-    }
-}
-
-struct CalcPad: View {
-    var body: some View {
-        VStack {
-            Button(action: {}) { Text("÷") }
-            Button(action: {}) { Text("×") }
-            Button(action: {}) { Text("-") }
-            Button(action: {}) { Text("+") }
-            Button(action: {}) { Text("=") }
         }
     }
 }
