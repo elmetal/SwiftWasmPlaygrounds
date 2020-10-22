@@ -6,9 +6,10 @@ struct ContentView: View {
             HeaderView()
               .padding()
             Spacer()
-            Text("oxゲーム")
+            Text("オセロ")
               .padding(4)
-            TTTGameBoardView()
+
+            OthelloBoard()
             Spacer()
             HTML("a", ["href":"https://github.com/elmetal/SwiftWasmPlaygrounds"]) {
               Text("repository")
