@@ -13,6 +13,7 @@ struct OthelloBoard: View {
                 Stone(color: state.current)
                 Text("の番")
             }
+            .padding(.bottom)
             ForEach(0..<rows, id: \.self) { row in
                 HStack {
                     ForEach(0..<columns, id: \.self) { column in
